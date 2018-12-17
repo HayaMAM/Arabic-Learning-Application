@@ -1,0 +1,10 @@
+<div class="container">
+
+<p>Welcome
+<% if user_signed_in? %>
+  <%= current_user.name %>
+  <% end %>
+  ,</p>
+<a href="#">Add a Word</a><br>
+<a href="#">Add a Collection</a>
+  </div>

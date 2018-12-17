@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+.haya{
+   background-image: url(https://i.postimg.cc/J7d7VwNK/arabic.png);
+   width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+     height: 70vh;
+     position: absolute; 
+}
+
+.title {
+    color: white;
+    text-align: center; 
+}
+
+.shadow-lg {
+    background: none;
+    margin: 45px 0px 0px 200px; 
+    width:500px;
+    height: 330px;
+   
+}
+
+.buttons {
+    text-align: center;
+}
+
+.paragraph{
+    color: white;
+    padding: 18px;
+}
+
+nav{
+background-color: #ff6f61;
+position: fixed;
+
+}
+
+a {
+    color: #dc3545;
+    text-decoration: none;}
+
+.back{
+    background-image: url(https://i.postimg.cc/nz8Z2WW2/back5.png);
+     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+     height: 100vh;
+     position: absolute; 
+}
+
+.shadow-lg.p-2{
+    text-align: center;
+     background: none;
+    margin: 45px 0px 0px 310px; 
+    width:500px;
+    height: 500px;
+}
