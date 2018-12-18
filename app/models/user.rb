@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  
+  has_many :words
   has_many :collections
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

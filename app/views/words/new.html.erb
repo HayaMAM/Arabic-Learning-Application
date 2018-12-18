@@ -1,0 +1,37 @@
+<div class="container">
+<%= form_for @word do |s| %>
+<h3>New Word</h3>
+
+<div>
+<strong> Term </strong>
+<%= s.text_field :term %>
+</div>
+
+<div>
+<strong> English form </strong>
+<%= s.text_field :english_form %>
+</div>
+
+<div>
+<strong> Arabic form </strong>
+<%= s.text_field :arabic_form %>
+</div>
+<div>
+<strong> Example </strong>
+<%= s.text_field :example %>
+</div>
+
+
+
+<div class = "collection">
+   <strong> <%= s.label :collection_id, "What collection does this word belong to?" %><strong><br>
+    <%= s.collection_select :collection_id, Collection.all, :id, :name, required: true %>
+  </div>
+
+  <div>
+  <%= s.submit %>
+  </div>
+
+
+<% end %>
+</div>

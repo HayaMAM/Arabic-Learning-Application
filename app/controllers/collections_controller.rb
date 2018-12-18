@@ -7,6 +7,7 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find_by(id: params[:id])
+    @word = Word.find_by(id: params[:id])
   end
 
   def new

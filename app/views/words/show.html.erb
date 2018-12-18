@@ -1,0 +1,16 @@
+<div class="container">
+
+<h4> Term:<%= @word.term %></h4>
+<h4> English form:<%= @word.english_form %></h4>
+<h4> Arabic form:<%= @word.arabic_form %></h4>
+<h4> Example:<%= @word.example %></h4>
+
+<h4> collection:<%= @word.collection.name %></h4>
+
+<% if user_signed_in? && @word.user_id == current_user.id %>
+                          <%= link_to 'Delete', word_path,
+                          method: :delete,
+                       data: { confirm: 'Are you sure?' } %>
+                      <%end %>
+                      
+                      </div>
