@@ -70,3 +70,15 @@ a {
     width:500px;
     height: 500px;
 }
+
+.bg-light {
+    background-color: #F36856!important;
+}
+
+a.nav-link {
+    color: white;
+}
+
+a {
+    color: white;
+}

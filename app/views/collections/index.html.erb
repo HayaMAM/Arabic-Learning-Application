@@ -1,9 +1,11 @@
 <div class="container">
 <% @collections.each do |t| %>
-<div class="row">
-  <div class="col-sm-5">
-    <div class="card" style="width: 500px;">
-      <div class="card-body">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top">
+  <%= image_tag("pic.jpg")%>
+  <div class="card-body">
+  
+     
         <h5 class="card-title"><%= link_to(t.name, collection_path(t)) %>  </h5>
       </div>
     </div>
