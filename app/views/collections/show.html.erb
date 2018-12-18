@@ -1,2 +1,10 @@
-<h1>Collections#show</h1>
-<p>Find me in app/views/collections/show.html.erb</p>
+<div class="container">
+<p>
+<%= @collection.name %>
+</p>
+<% if user_signed_in? && @collection.user_id == current_user.id %>
+                          <%= link_to 'Delete', collection_path,
+                          method: :delete,
+                       data: { confirm: 'Are you sure?' } %>
+                      <%end %>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term: MyString
+  arabic_form: MyString
+  english_form: MyString
+
+two:
+  term: MyString
+  arabic_form: MyString
+  english_form: MyString

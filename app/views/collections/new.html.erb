@@ -1,0 +1,12 @@
+<div class="container">
+
+<%= form_for @collection do |form| %>
+<p>
+    <strong >Add a Collection </strong><br>
+    <%= form.text_field :name %>
+  </p>
+    <div class="actions">
+<%= form.submit "Add"%>
+<% end %>
+</div>
+</div>
