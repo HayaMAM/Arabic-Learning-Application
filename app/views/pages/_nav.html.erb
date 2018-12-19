@@ -1,6 +1,6 @@
 
  
- <nav class="navbar navbar-custom navbar-expand-lg" style="background-color: #F36856;">
+ <nav class="navbar navbar-custom navbar-expand-lg" style="background-color: #dc6767;">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     
@@ -12,7 +12,7 @@
  <% if current_user %>
       <li class="nav-item">
       <%= link_to current_user.name, user_path(current_user), {:class=>"nav-link"} %></li> 
-      <li class="nav-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+      <li class="nav-item nav-link"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
       <li class="nav-item"><%= link_to 'Collections', collections_path, {:class=>"nav-link"} %></li>
 
       <% end %>

@@ -13,8 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+     font-family: 'Ovo', serif;
+ }
 .haya{
-   background-image: url(https://i.postimg.cc/J7d7VwNK/arabic.png);
+   background-image: url(https://i.postimg.cc/kgppjxC7/newback1.png);
    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -50,9 +54,6 @@ position: fixed;
 
 }
 
-a {
-    color: #dc3545;
-    text-decoration: none;}
 
 .back{
     background-image: url(https://i.postimg.cc/nz8Z2WW2/back5.png);
@@ -77,8 +78,29 @@ a {
 
 a.nav-link {
     color: white;
+    text-decoration: none !important; 
+
 }
 
 a {
-    color: white;
+    /* color: white !important; */
+    text-decoration: none !important; 
+
+}
+
+div.thing {
+    padding-left: 300px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+div.word-show {
+    margin-left: 300px;
+    margin-right: 400px;
+    margin-top: 60px;
+}
+
+div.card.big{
+    height: 400px;
+    width: 450px;
 }

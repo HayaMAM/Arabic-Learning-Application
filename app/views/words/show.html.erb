@@ -1,16 +1,24 @@
 <div class="container">
+<div class="word-show">
+<div class="card big">
+<div class="card-header">
+<h3><%= @word.term %></h3></div>
+<div class="wrap" style="padding: 15px">
 
-<h4> Term:<%= @word.term %></h4>
-<h4> English form:<%= @word.english_form %></h4>
-<h4> Arabic form:<%= @word.arabic_form %></h4>
-<h4> Example:<%= @word.example %></h4>
-
-<h4> collection:<%= @word.collection.name %></h4>
-
+<h5> English form: <%= @word.english_form %></h5>
+<h5> Arabic form: <%= @word.arabic_form %></h5>
+<h5> Example: <%= @word.example %></h5>
+<!--<h4> collection: <%= @word.collection.name %></h4>-->
+</div>
+<br><br><br><br><br>
+<hr>
+<div class="wrap" style="padding-left: 18px;">
 <% if user_signed_in? && @word.user_id == current_user.id %>
                           <%= link_to 'Delete', word_path,
                           method: :delete,
                        data: { confirm: 'Are you sure?' } %>
                       <%end %>
-                      
                       </div>
+                      </div>
+</div>
+</div>
