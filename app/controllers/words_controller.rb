@@ -21,12 +21,12 @@ class WordsController < ApplicationController
   def destroy
     @word = Word.find(params[:id])
     @word.destroy
-    redirect_to collection_path
+    redirect_to collections_path
   end
 
   private
 
   def word_params
-    params.require(:word).permit(:term, :arabic_form, :english_form, :example, :collection_id)
+    params.require(:word).permit(:term, :arabic_form, :english_form, :example, :collection_id, :audio, :image)
   end
 end

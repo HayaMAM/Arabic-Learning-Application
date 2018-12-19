@@ -5,14 +5,19 @@
 <h3><%= @word.term %></h3></div>
 <div class="wrap" style="padding: 15px">
 
+<% if @word.image %>
+<%= cl_image_tag @word.image, {:class=>"card-img-top"}%>
+    <% end %>
 <h5> English form: <%= @word.english_form %></h5>
 <h5> Arabic form: <%= @word.arabic_form %></h5>
 <h5> Example: <%= @word.example %></h5>
 <!--<h4> collection: <%= @word.collection.name %></h4>-->
 <%= audio_tag @word.audio, controls: true %>
 
+<button onclick=“playAudio()” disabled=“” id=“play-audio-button”>Play</button>
+
 </div>
-<br><br><br><br><br>
+
 <hr>
 <div class="wrap" style="padding-left: 18px;">
 <% if user_signed_in? && @word.user_id == current_user.id %>
@@ -21,6 +26,6 @@
                        data: { confirm: 'Are you sure?' } %>
                       <%end %>
                       </div>
-                      </div>
+</div>
 </div>
 </div>

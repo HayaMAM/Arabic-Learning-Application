@@ -107,7 +107,7 @@ div.word-show {
 }
 
 div.card.big{
-    height: 460px;
+    height: 550px;
     width: 450px;
 }
 
@@ -122,4 +122,9 @@ strong {
 
 input {
     margin: 10px;
+}
+
+.paragraph {
+    font-size: 20px;
+    padding: 50px;
 }

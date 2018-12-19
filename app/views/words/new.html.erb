@@ -34,10 +34,20 @@
   <%= s.file_field :audio %>
 </div>
 
+<div>
+  <%= s.label "Image" %>
+  <%= s.file_field :image %>
+</div>
+
 <div style="padding-bottom:10px;">
    <strong> <%= s.label :collection_id, "What collection does this word belong to?" %><strong><br>
     <%= s.collection_select :collection_id, Collection.all, :id, :name, required: true %>
   </div>
+
+<div>
+<button onclick=“recordStop()” id=“record-stop-button”>Record</button>
+</div>
+
 <br>
   <div>
   <%= s.submit %>

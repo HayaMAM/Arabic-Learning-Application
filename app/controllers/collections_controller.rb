@@ -16,14 +16,14 @@ class CollectionsController < ApplicationController
 
   def create
     collection = current_user.collections.create(collection_params)
-    redirect_to collections_path
+    redirect_to collections_path 
   end
 
   def destroy
     @collection = Collection.find(params[:id])
     @collection.destroy
 
-    redirect_to root_path
+    redirect_to collections_path 
   end
 
   private
