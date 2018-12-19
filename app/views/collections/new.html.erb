@@ -3,8 +3,13 @@
 <%= form_for @collection do |form| %>
 <p>
     <strong >Add a Collection </strong><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :required => true %>
   </p>
+
+  <div>
+  <%= form.label "Image" %>
+  <%= form.file_field :image, :required => true %>
+</div>
     <div class="actions">
 <%= form.submit "Add"%>
 <% end %>

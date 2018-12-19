@@ -22,8 +22,9 @@
    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-     height: 70vh;
      position: absolute; 
+         max-width: 1280px;
+    max-height: 400px;
 }
 
 .title {
@@ -89,7 +90,8 @@ a {
 }
 
 div.thing {
-    padding-left: 300px;
+    padding-left: 200px;
+    padding-right: 150px;
     padding-top: 40px;
     padding-bottom: 20px;
 }
@@ -103,4 +105,9 @@ div.word-show {
 div.card.big{
     height: 400px;
     width: 450px;
+}
+
+img.card-img-top {
+    height: 200px;
+    width: 294px;
 }

@@ -3,8 +3,10 @@
 
 <% @collections.each do |t| %>
 <div class="card text-center">
-<img class="card-img-top" src="https://cosmos-images2.imgix.net/file/spina/photo/14772/GettyImages-691120979.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835">
-<div class="card-deck">
+ <% if t.image %>
+        <%= cl_image_tag t.image, {:class=>"card-img-top"}%>
+    <% end %>
+    <div class="card-deck">
 
 <div class="col"><h5 style="padding: 10px;"> <%= link_to(t.name, collection_path(t)) %></h5>
 
