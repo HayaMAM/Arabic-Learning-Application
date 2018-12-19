@@ -23,7 +23,7 @@ class CollectionsController < ApplicationController
     @collection = Collection.find(params[:id])
     @collection.destroy
 
-    redirect_to collections_path
+    redirect_to root_path
   end
 
   private

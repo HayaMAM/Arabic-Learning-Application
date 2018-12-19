@@ -1,37 +1,50 @@
 <div class="container">
+<div class="word-show">
+<div class="card big">
+
 <%= form_for @word do |s| %>
+<div class="card-header">
+
 <h3>New Word</h3>
-
-<div>
+</div>
+<br>
+<div class="wrap" style="padding: 15px">
+<div style="padding-bottom:10px;">
 <strong> Term </strong>
-<%= s.text_field :term %>
+   <%= s.text_field :term, :required => true %>
 </div>
 
-<div>
+<div style="padding-bottom:10px;">
 <strong> English form </strong>
-<%= s.text_field :english_form %>
+<%= s.text_field :english_form, :required => true %>
 </div>
 
-<div>
+<div style="padding-bottom:10px;">
 <strong> Arabic form </strong>
-<%= s.text_field :arabic_form %>
+<%= s.text_field :arabic_form, :required => true %>
 </div>
-<div>
+
+<div style="padding-bottom:10px;">
 <strong> Example </strong>
-<%= s.text_field :example %>
+<%= s.text_field :example, :required => true %>
 </div>
 
+<div style="padding-bottom:10px;">
+  <strong> Pronunciation </strong>
+  <%= s.file_field :audio %>
+</div>
 
-
-<div class = "collection">
+<div style="padding-bottom:10px;">
    <strong> <%= s.label :collection_id, "What collection does this word belong to?" %><strong><br>
     <%= s.collection_select :collection_id, Collection.all, :id, :name, required: true %>
   </div>
-
+<br>
   <div>
   <%= s.submit %>
   </div>
 
-
 <% end %>
+</div>
+</div>
+</div>
 </div>

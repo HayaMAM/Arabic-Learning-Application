@@ -12,7 +12,7 @@
  <% if current_user %>
       <li class="nav-item">
       <%= link_to current_user.name, user_path(current_user), {:class=>"nav-link"} %></li> 
-      <li class="nav-item nav-link"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+      <li class="nav-item nav-link"><%= link_to 'Log Out', destroy_user_session_path, method: :delete,id:"n" %></li>
       <li class="nav-item"><%= link_to 'Collections', collections_path, {:class=>"nav-link"} %></li>
 
       <% end %>

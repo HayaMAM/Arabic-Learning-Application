@@ -9,11 +9,9 @@
 <% @collection.words.each do |f| %>
 <h5>
 <div class="card" style="padding: 10px;">
-<%= link_to f.term, f %>
-<%= link_to f.english_form, f %></h5>
+<%= link_to "#{f.term} - #{f.english_form}", f %></h5>
 <% end %>
-
-<br><br>
+<br><br><br>
 <hr>
 <%= link_to 'Add a Word', new_word_path %> <br>
 
@@ -22,5 +20,7 @@
                           method: :delete,
                        data: { confirm: 'Are you sure?' } %>
                       <%end %>
+
+</div>
 </div>
 </div>

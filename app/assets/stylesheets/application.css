@@ -17,6 +17,8 @@
  *{
      font-family: 'Ovo', serif;
  }
+
+
 .haya{
    background-image: url(https://i.postimg.cc/kgppjxC7/newback1.png);
    width: 100%;
@@ -88,7 +90,9 @@ a {
     text-decoration: none !important; 
 
 }
-
+#n{
+color:white;
+}
 div.thing {
     padding-left: 200px;
     padding-right: 150px;
@@ -103,11 +107,19 @@ div.word-show {
 }
 
 div.card.big{
-    height: 400px;
+    height: 460px;
     width: 450px;
 }
 
 img.card-img-top {
     height: 200px;
     width: 294px;
+}
+
+strong {
+    padding: 10px;
+}
+
+input {
+    margin: 10px;
 }

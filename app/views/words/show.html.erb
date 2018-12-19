@@ -9,6 +9,8 @@
 <h5> Arabic form: <%= @word.arabic_form %></h5>
 <h5> Example: <%= @word.example %></h5>
 <!--<h4> collection: <%= @word.collection.name %></h4>-->
+<%= audio_tag @word.audio, controls: true %>
+
 </div>
 <br><br><br><br><br>
 <hr>
