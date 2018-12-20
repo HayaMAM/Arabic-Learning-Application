@@ -13,7 +13,23 @@ const recordAudio = () =>
                     const audioBlob = new Blob(audioChunks); // Creates a file
                     const audioUrl = URL.createObjectURL(audioBlob); // A url for the file
                     const formData = new FormData(); // Start of setting up params
-                    formData.append("audio_summary[audio]", audioBlob); // Adding params
+                    const term = document.querySelector("#word_term").value
+                    const english_form = document.querySelector("#word_english_form").value
+                    const arabic_form = document.querySelector("#word_arabic_form").value
+                    const example = document.querySelector("#word_example").value
+                    const collection_id = document.querySelector("#word_collection_id").value
+                    const image = document.querySelector("#word_image").files[0]
+
+
+                    formData.append("word[audio]", audioBlob); // Adding params
+                    formData.append("word[term]", term); // Adding params
+                    formData.append("word[english_form]", english_form); // Adding params
+                    formData.append("word[arabic_form]", arabic_form); // Adding params
+                    formData.append("word[example]", example); // Adding params
+                    formData.append("word[image]", image); // Adding params
+                    formData.append("word[collection_id]", collection_id); // Adding params
+
+
                     //   formData.append("audio_summary[google_id]", window.location.pathname.replace("/books/", "")
                     //   );
                     // Send a POST request to /audio_summaries - done √
@@ -22,14 +38,16 @@ const recordAudio = () =>
                     // It will add them both into the database
                     //   The audio will be uploaded automatically to Cloudinary (because of the uploader)
                     //   Cloudinary will give you back a URL that you can use to play the audio
-                    fetch("/audio_summaries", {
+                    fetch("/words", {
                         method: "POST",
                         headers: {
                             //   "Content-Type": "multipart/form-data",
                             Accept: "application/json"
                         },
                         body: formData
-                    });
+                    }).then(res => res.json()).then(function (data) {
+                        location.href = `/words/${data.id}`
+                    })
                     const audio = new Audio(audioUrl);
                     const play = () => audio.play();
                     resolve({ audioBlob, audioUrl, play });

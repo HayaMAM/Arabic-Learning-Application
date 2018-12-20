@@ -29,14 +29,14 @@
 <%= s.text_field :example, :required => true %>
 </div>
 
-<div style="padding-bottom:10px;">
+<!--<div style="padding-bottom:10px;">
   <strong> Pronunciation </strong>
   <%= s.file_field :audio %>
-</div>
+</div>-->
 
 <div>
   <%= s.label "Image" %>
-  <%= s.file_field :image %>
+  <%= s.file_field :image, :required => true %>
 </div>
 
 <div style="padding-bottom:10px;">
@@ -45,13 +45,13 @@
   </div>
 
 <div>
-<button onclick=“recordStop()” id=“record-stop-button”>Record</button>
+<h3 onclick="recordStop()" id="record-stop-button">Record</h3>
 </div>
 
 <br>
-  <div>
+  <!--<div>
   <%= s.submit %>
-  </div>
+  </div>-->
 
 <% end %>
 </div>

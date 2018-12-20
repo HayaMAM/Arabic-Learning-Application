@@ -3,7 +3,7 @@
 <div class="card big">
 <div class="card-header">
 <h3><%= @word.term %></h3></div>
-<div class="wrap" style="padding: 15px">
+<div class="wrap" style="padding: 10px">
 
 <% if @word.image %>
 <%= cl_image_tag @word.image, {:class=>"card-img-top"}%>
@@ -14,7 +14,7 @@
 <!--<h4> collection: <%= @word.collection.name %></h4>-->
 <%= audio_tag @word.audio, controls: true %>
 
-<button onclick=“playAudio()” disabled=“” id=“play-audio-button”>Play</button>
+<!--<button onclick=“playAudio()” disabled=“” id=“play-audio-button”>Play</button>-->
 
 </div>
 

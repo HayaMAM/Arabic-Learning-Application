@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy]
+  skip_before_action :verify_authenticity_token
 
   def index
     @words = Word.all
@@ -15,7 +16,11 @@ class WordsController < ApplicationController
 
   def create
     word = current_user.words.create(word_params)
-    redirect_to word_path(word)
+    # byebug
+    respond_to do |f|
+      f.html { redirect_to word_path(word) }
+      f.json { render json: word }
+    end
   end
 
   def destroy
