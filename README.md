@@ -17,7 +17,7 @@
  ## Credits
 * The first credit goes to our great instructors Jack Jeffress and Moath Althawad. I'm really greatful and thankful for them. 
 * Abdullah AlQahtani & Mohammed. 
-* Firas Said [https://firassaid.myportfolio.com/arabic-typography-03]
+* [Firas Said](https://firassaid.myportfolio.com/arabic-typography-03)
 
 
  
