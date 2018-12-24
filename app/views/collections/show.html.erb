@@ -1,5 +1,7 @@
 <div class="container">
-<h3 style="padding-top: 15px; padding-left: 15px;">
+<div class="collection-show">
+<h3 style="padding-top: 15px; padding-left: 15px;
+">
 <%= @collection.name %>
 </h3>
 
@@ -13,14 +15,15 @@
 <% end %>
 <br><br><br>
 <hr>
-<%= link_to 'Add a Word', new_word_path %> <br>
+<button class="btn btn-outline-danger"><%= link_to 'Add a Word', new_word_path %></button> <br><br>
 
 <% if user_signed_in? && @collection.user_id == current_user.id %>
-                          <%= link_to 'Delete the Collection', collection_path,
+                          <button class="btn btn-outline-danger"><%= link_to 'Delete the Collection', collection_path,
                           method: :delete,
-                       data: { confirm: 'Are you sure?' } %>
+                       data: { confirm: 'Are you sure?' } %></button>
                       <%end %>
 
+</div>
 </div>
 </div>
 </div>

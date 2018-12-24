@@ -1,10 +1,15 @@
 <div class="container">
+<div class="users-show">
+<div class="thing">
 
-<p>Welcome
+<h4>Welcome
 <% if user_signed_in? %>
   <%= current_user.name %>
   <% end %>
-  ,</p>
-<a><%= link_to 'Add a Collection', new_collection_path %></a><br>
-<a><%= link_to 'Add a Word', new_word_path %></a>
+  ,</h4>
+  <br>
+<button class="btn btn-outline-danger"><%= link_to 'Add a Collection', new_collection_path %></button><br><br>
+<button class="btn btn-outline-danger"><%= link_to 'Add a Word', new_word_path %></button>
   </div>
+</div>
+</div>
