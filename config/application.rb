@@ -20,7 +20,6 @@ module ArabicLearningApp
     # the framework and any gems in your application.
     
     config.assets.initialize_on_precompile = false
-    config.generators.javascript_engine = :js
   end
 end
 
